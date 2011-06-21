@@ -166,6 +166,7 @@
 		CGRect r = tile.frame;
 		if(r.origin.y > firstY || r.origin.y + r.size.height < secondY){
 			[toReuse addObject:tile];
+            [tile removeFromSuperview];     // Prevents accumulation
 			if(reusableTiles.count < maxReusable) [reusableTiles addObject:tile];
 		}
 	}
@@ -241,12 +242,11 @@
 
 - (CHTileView *)dequeueReusableTileWithIdentifier:(NSString *)identifier{
 	CHTileView *foundTile = nil;
-	BOOL found = NO;
-	
+    	
 	for(CHTileView *tile in reusableTiles){
-		if(!found && [[tile reuseIdentifier] isEqualToString:identifier]){
+		if([[tile reuseIdentifier] isEqualToString:identifier]){
 			foundTile = tile;
-			found = YES;
+			break;
 		}
 	}
 	
