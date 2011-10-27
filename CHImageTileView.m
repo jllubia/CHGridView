@@ -8,7 +8,7 @@
 //  http://cameron.io/project/chgridview
 //
 
-#include <math.h>.
+#include <math.h>
 #import "CHImageTileView.h"
 
 @implementation CHImageTileView
