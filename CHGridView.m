@@ -68,12 +68,6 @@
 - (void)dealloc {
 	[[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
 	
-	[sectionCounts release];
-	[layout release];
-	[reusableTiles release];
-	[visibleSectionHeaders release];
-	[visibleTiles release];
-    [super dealloc];
 }
 
 #pragma mark loading methods
@@ -114,7 +108,6 @@
 				[self insertSubview:sectionHeader atIndex:self.subviews.count];
 				
 			[visibleSectionHeaders addObject:sectionHeader];
-			[sectionHeader release];
 		}
 	}
 	
@@ -172,7 +165,6 @@
 	}
 	
 	[visibleTiles removeObjectsInArray:toReuse];
-	[toReuse release];
 }
 
 - (void)removeSectionTitleNotInRange:(CHSectionRange)range{
@@ -251,7 +243,7 @@
 	}
 	
 	if(foundTile){
-		[[foundTile retain] autorelease];
+		//[[foundTile retain] autorelease];
 		[reusableTiles removeObject:foundTile];
 	}
 	

@@ -25,8 +25,7 @@
 }
 
 - (void)setImage:(UIImage *)i{
-	[image release];
-	image = [i retain];
+	image = i;
 }
 
 - (void)drawContentRect:(CGRect)rect{

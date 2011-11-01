@@ -41,10 +41,10 @@ static CHGridIndexPath CHGridIndexPathMake(int section, int tileIndex){
 @property (nonatomic) BOOL							selected;
 @property (nonatomic) BOOL							highlighted;
 
-@property (nonatomic, retain) UIColor				*contentBackgroundColor;
+@property (nonatomic, strong) UIColor				*contentBackgroundColor;
 
 @property (nonatomic) CGSize						shadowOffset;
-@property (nonatomic, retain) UIColor				*shadowColor;
+@property (nonatomic, strong) UIColor				*shadowColor;
 @property (nonatomic) CGFloat						shadowBlur;
 
 - (id)initWithFrame:(CGRect)frame reuseIdentifier:(NSString *)reuseId;

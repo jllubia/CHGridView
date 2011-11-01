@@ -38,13 +38,6 @@
 	return self;
 }
 
-- (void)dealloc{
-	[justTiles release];
-	[sectionTitles release];
-	[index release];
-	[super dealloc];
-}
-
 #pragma mark setters
 
 - (void)setRowHeight:(CGFloat)f{
@@ -76,7 +69,6 @@
 		CHGridLayoutSection *section2 = [[CHGridLayoutSection alloc] initWithSection:i];
 		[index addObject:section];
 		[sectionTitles addObject:section2];
-		[section2 release];
 	}
 }
 
@@ -88,7 +80,6 @@
 		CHGridLayoutTile *tile = [[CHGridLayoutTile alloc] initWithIndexPath:CHGridIndexPathMake(section, i)];
 		[[index objectAtIndex:section] addObject:tile];
 		[justTiles addObject:tile];
-		[tile release];
 	}
 }
 

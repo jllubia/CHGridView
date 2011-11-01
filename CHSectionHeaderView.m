@@ -32,11 +32,6 @@
     return self;
 }
 
-- (void)dealloc {
-	[topLine release];
-	[title release];
-    [super dealloc];
-}
 
 - (void)setSection:(int)s{
 	section = s;

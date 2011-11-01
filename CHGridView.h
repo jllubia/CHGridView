@@ -43,7 +43,7 @@
 	NSMutableArray					*visibleSectionHeaders;
 	NSMutableArray					*reusableTiles;
 	
-	id<CHGridViewDataSource>		dataSource;
+	id<CHGridViewDataSource>		__unsafe_unretained dataSource;
 	
 	int								sections;
 	NSMutableArray					*sectionCounts;
@@ -62,8 +62,8 @@
 	float							sectionTitleHeight;
 }
 
-@property (nonatomic, assign) id<CHGridViewDataSource> dataSource;
-@property (nonatomic, assign) id<CHGridViewDelegate,UIScrollViewDelegate> delegate;
+@property (nonatomic, unsafe_unretained) id<CHGridViewDataSource> dataSource;
+@property (nonatomic, unsafe_unretained) id<CHGridViewDelegate,UIScrollViewDelegate> delegate;
 
 @property (nonatomic) BOOL						centerTilesInGrid;
 @property (nonatomic) BOOL						allowsSelection;

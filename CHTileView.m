@@ -20,10 +20,10 @@
 		reuseIdentifier = [reuseId copy];
 		
 		if(contentBackgroundColor == nil)
-			contentBackgroundColor = [[UIColor whiteColor] retain];
+			contentBackgroundColor = [UIColor whiteColor];
 		
 		shadowOffset = CGSizeMake(0.0f, 0.0f);
-		shadowColor = [[UIColor colorWithWhite:0.0f alpha:0.5f] retain];
+		shadowColor = [UIColor colorWithWhite:0.0f alpha:0.5f];
 		shadowBlur = 0.0f;
 		
 		[self setOpaque:YES];
@@ -32,11 +32,6 @@
 	return self;
 }
 
-- (void)dealloc {
-	[shadowColor release];
-	[reuseIdentifier release];
-    [super dealloc];
-}
 
 - (void)setSelected:(BOOL)s{
 	selected = s;

@@ -26,8 +26,4 @@
 	return [NSString stringWithFormat:@"%@, indexPath section = %i tileIndex = %i, x = %f y = %f w = %f h = %f", [super description], indexPath.section, indexPath.tileIndex, rect.origin.x, rect.origin.y, rect.size.width, rect.size.height];
 }
 
-- (void)dealloc{
-	[super dealloc];
-}
-
 @end

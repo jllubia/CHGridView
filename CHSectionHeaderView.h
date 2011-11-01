@@ -19,7 +19,7 @@
 }
 
 @property (nonatomic) int					section;
-@property (nonatomic, retain) NSString		*title;
+@property (nonatomic, strong) NSString		*title;
 @property (nonatomic) CGFloat				yCoordinate;
 
 //subclasses should implement drawRect: but must draw title on their own

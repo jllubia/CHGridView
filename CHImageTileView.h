@@ -16,7 +16,7 @@
 	BOOL			scalesImageToFit;
 }
 
-@property (nonatomic, retain) UIImage		*image;
+@property (nonatomic, strong) UIImage		*image;
 @property (nonatomic) BOOL					scalesImageToFit; // don't use this EVER
 
 @end
