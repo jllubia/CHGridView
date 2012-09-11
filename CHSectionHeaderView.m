@@ -16,7 +16,7 @@
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
 		if(title == nil)
-			title = [[NSString alloc] initWithString:@""];
+			title = @"";
 		
 		if(topLine == nil)
 			topLine = [[UIView alloc] init];
