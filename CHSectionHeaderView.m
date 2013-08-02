@@ -102,8 +102,8 @@
 	[[UIColor whiteColor] set];
 	CGContextSetShadow(c, CGSizeMake(0, -1.0f), 1.0f);
 	
-	CGSize fontSize = [title sizeWithFont:f forWidth:textWidth lineBreakMode:UILineBreakModeTailTruncation];
-	[title drawInRect:CGRectMake(padding, ceil((b.size.height - fontSize.height) / 2), textWidth, fontSize.height) withFont:f lineBreakMode:UILineBreakModeTailTruncation alignment:UITextAlignmentLeft];
+	CGSize fontSize = [title sizeWithFont:f forWidth:textWidth lineBreakMode: NSLineBreakByTruncatingTail];
+	[title drawInRect:CGRectMake(padding, ceil((b.size.height - fontSize.height) / 2), textWidth, fontSize.height) withFont:f lineBreakMode: NSLineBreakByTruncatingTail alignment:NSTextAlignmentLeft];
 }
 
 - (NSString *)description{
